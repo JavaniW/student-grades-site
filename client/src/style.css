@@ -1,0 +1,61 @@
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  padding: 2rem;
+}
+
+/* ADD GRADE PAGE */
+#add-grade-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#add-grade-page h1 {
+  margin-bottom: 2.5rem;
+}
+
+.submit-grade-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* VIEW GRADES PAGE */
+#view-grades-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#view-grades-page h1 {
+  margin-bottom: 2.5rem;
+}
+
+.grades-table {
+  width: max-content;
+  margin-bottom: 2rem;
+}

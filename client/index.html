@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <script defer type="module" src="/src/main.ts"></script>
+    <title>Student Grade</title>
+  </head>
+  <body>
+    <div id="add-grade-page">
+      <h1>Please Enter Student ID and Grade:</h1>
+      <form class="submit-grade-form">
+        <input
+          required
+          name="student_id"
+          type="text"
+          placeholder="Student ID"
+        />
+        <input
+          required
+          name="student_grade"
+          type="number"
+          placeholder="Grade"
+          step=".01"
+        />
+        <button class="submit-grade-form__button" type="submit">Submit</button>
+      </form>
+      <a href="grades.html">View Grades</a>
+    </div>
+  </body>
+</html>
