@@ -3,7 +3,7 @@ const gradesTableBody: HTMLElement | null =
 const gradesTableFoot: HTMLElement | null =
   document.querySelector(".table-footer");
 
-fetch("http://localhost:8080/api")
+fetch("http://ec2-52-91-57-51.compute-1.amazonaws.com:8080/api")
   .then((res) => res.json())
   .then((res) => {
     if (!gradesTableBody) return;

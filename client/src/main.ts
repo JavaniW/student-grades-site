@@ -17,7 +17,7 @@ form?.addEventListener("submit", (e: Event) => {
     console.log(`Key: ${key} Value: ${value}`);
   }
 
-  fetch(`http://localhost:8080/api`, {
+  fetch(`http://ec2-52-91-57-51.compute-1.amazonaws.com:8080/api`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
