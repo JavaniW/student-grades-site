@@ -39,9 +39,7 @@ const addGrade = async (entry: StudentGrade): Promise<any> => {
 
 const getGrades = async (): Promise<any> => {
   try {
-    console.log("IN GET GRADES");
     const records = await sql`SELECT * FROM student_grades ORDER BY id`;
-    console.log("AFTER SELECT STATEMENT");
     return records;
   } catch (err) {
     console.log(err);
@@ -66,7 +64,6 @@ const server = http.createServer(async (req: any, res: any) => {
   }
 
   if (req.url == "/api" && req.method == "PUT") {
-    console.log("In PUT");
     let data: any = await getReqData(req);
     const result = await addGrade(JSON.parse(data));
     res.writeHead(200, { ...headers, "Content-Type": "application/json" });
@@ -76,9 +73,7 @@ const server = http.createServer(async (req: any, res: any) => {
   }
 
   if (req.url == "/api" && req.method == "GET") {
-    console.log("In GET");
     const result = await getGrades();
-    console.log("AFTER GET GRADES");
     res.writeHead(200, { ...headers, "Content-Type": "application/json" });
     res.write(JSON.stringify(result));
     res.end();
